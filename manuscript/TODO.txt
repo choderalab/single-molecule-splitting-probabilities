@@ -1,0 +1,8 @@
+TODO for single-molecule-pfold paper
+
+* Read new papers dumped in references/
+* Pay particular attention to "Coordinate-dependent diffusion in protein folding" paper from Best and Hummer
+* Add discussion of use of splitting probability in judging reaction coordinates in molecular simulation, explaining why we can't use those methods here
+* Note that those methods only test necessary, but not sufficient, conditions (2010 Beren Peters paper)
+* Is there *anything* we can do with Mori-Zwanzig to motivate Langevin equation and memory function as a test?
+* Include position-dependent diffusion estimation?

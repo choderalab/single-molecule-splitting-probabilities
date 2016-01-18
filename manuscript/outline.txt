@@ -1,0 +1,181 @@
+Outline for paper analyzing equilibrium single-molecule pulling trajectories by Pfold analysis.
+
+= Relevant references =
+== Sources of equilibrium experimental data ==
+ * Michael T. Woodside, William M. Behnke-Parks, Kevan Larizadeh, Kevin Travers, Daniel Herschlag, and Steven M. Block. Nanomechanical measurements of the sequence-dependent folding landscapes of single nucleic acid hairpins. PNAS 2006 103: 6190-6195. [http://dx.doi.org/10.1073/pnas.0511048103 link]
+ * Glenna Smith and Norbert Scherer?
+== Sources of nonequilibrium experimental data ==
+== Theoretical articles on assessing reaction coordinates ==
+ * Best RB, Paci E, Hummer G, and Dudko OK. Pulling Direction as a Reaction Coordinate for the Mechanical Unfolding of Single Molecules. JPC B, ASAP Article [http://dx.doi.org/10.1021/jp075955j link]
+ * Peters B. Using the histogram test to quantify reaction coordinate error. JCP 125:241101, 2006. [http://dx.doi.org/10.1063/1.2409924 link]
+== Extracting potentials of mean force from nonequilibrium data ==
+ * Hummer and Szabo
+ * Minh and Adib
+ * Chelli et al.
+ * Crooks and Bustamante
+
+= Potential titles =
+Not sure I've come up with the right title yet.  Some possibilities:
+ * Splitting probabilities as a test of reaction coordinate choice in single-molecule experiments (most general, since it applies to single-molecule FRET experiments too)
+ * Extension as a reaction coordinate in single-molecule pulling experiments  <-- Vijay's 2nd favorite
+ * When is extension a good reaction coordinate in single-molecule pulling experiments?  <-- Vijay's favorite
+ * On the pulling coordinate as a reaction coordinate in single-molecule experiments   
+
+= Authors =
+ * Vijay S. Pande (it was Vijay's idea, and he's already done some analysis)
+ * John D. Chodera
+
+= Target journal =
+ * PRL (obvious choice)
+
+= Outline =
+
+== Abstract ==
+ * There has been much interest in understanding the dynamics of biological macromolecules.
+ * Rapid development in single molecule experiments has led to the ability to observe trajectories of a single molecule fluctuating at equilibrium, potentially in the presence of an external biasing potential (pulling, FRET).
+ * Often, the observable (such as extension along a pulling coordinate or FRET efficiency between two fluorophores) is chosen as a putative reaction coordinate, it which it is hoped the kinetic behavior of the model can be described by one-dimensional diffusion on this coordinate.
+ * Not all choices of coordinate will lead to proper reaction coordinates; poor choices will not enjoy a separation of timescales between motion along the coordinate and relaxation of degrees of freedom orthogonal to it; such a kinetic model will fail to accurately describe dynamics.
+ * Here, we invoke the concept of splitting probabilities between two absorbing boundaries as a test of the suitability of this choice of reaction coordinate for equilibium single-molecule experiments.
+ * We apply the test to a set of single-molecule equilibrium trajectories of a DNA hairpin system under constant force load, and show that the pulling coordinate is indeed a good reaction coordinate in this case.
+
+VSP note: do we want to call this splitting probabilities of commitment probabilities (I've seen the latter more)
+
+JDC:I think we want to call them "splitting probabilities".  The term "commitment probabilities" or "committor probabilities" is certainly more popular, but implies that the dynamical system is really committed to either one well or another when it reaches this point.  In the general case, we may not even have distinct wells, or a rate constant, so we should allow the placement of arbitrary absorbing boundaries and use the concept of "splitting probabilities" to be most general.
+
+== Introduction ==
+
+=== The desire to extract a kinetic model from single-molecule experiments ===
+
+ * A variety of new experimental techniques have made it possible to monitor the conformational fluctuations of a single molecule under equilibrium and nonequilibrium conditions.
+ * Generally, the measurement is limited to a single experimental observable, such as the extension along a pulling coordinate separating two glass beads in a double optical trap [CITE] or the FRET efficiency of two fluorophores with overlapping emission and absorption spectra [CITE]
+ * To describe the dynamics of the system, it is tempting to construct a simple model of diffusion along this observed coordinate by extracting a potential of mean force and a (potentially distance-dependent) diffusion constant, and modeling dynamics with either a Fokker-Planck (Langevin) or Smoluchowski (overdamped Langevin; Brownian) dynamical model.
+
+=== A faithful kinetic model requires a good reaction coordinate ===
+ * In order for this type of kinetic model to accurately describe dynamics, there must be a separation of timescales between the putative reaction coordinate and the other degrees of freedom not explicitly included in the model.
+ * In this regime, the orthogonal degrees of freedom relax very quickly, before the slow coordinate (reaction coordinate) has a chance to move appreciably.  These other coordinates can be considered to be part of a stochastic bath coupled to the reaction coordinate in a way that produces Langevin- or Brownian-like diffusion along it.
+ * It is important to remember that not all observables make good reaction coordinates -- it is quite possible to choose coordinates that are coupled with other degrees of freedom on a similar timescale.  (illustrate with 2D double-well potential from Chandler papers?)
+
+=== Ways which one might validate a reaction coordinate ===
+ * The Mori-Zwanzig projection operator formalism provides a rigorous way to project dynamics onto one or more observables of interest by invoking a memory function to capture the effects of other degrees of freedom.
+ * If the memory function dies out on a timescale much faster than the relaxation of the correlation function along the coordinate of interest, then this coordinate will be a good reaction coordinate on some timescale.
+ * While methods to extract the memory function directly from observed trajectories do exist (cite Lange and Grubmüller), these methods are difficult to apply, involve regularization methods to circumvent the ill-posed Laplace inversion, and do not yet provide a consistent way to extract uncertainties in the computed memory functions.
+
+== Proposed method ==
+
+=== The concept of splitting probabilities ===
+ * We draw upon the concept of 'splitting probabilities', the probability that the system first encounters one absorbing boundary (usually placed within a well-defined free energy well) before another given an initial starting position along the coordinate.
+ * The splitting probability has proven to be a useful tool for probing mechanism in unimolecular rate processes (cite) or elucidating the transition state ensemble in simulations of protein folding (cite Pande).
+ * For a one-dimensional Fokker-Planck process -- a process that can be described by Langevin dynamics controlled by a (potentially position-dependent) diffusion constant -- the splitting probability can be demonstrated to be given by (equation).
+ * 
+
+=== Computation of splitting probabilities and their uncertainties from observed trajectories ===
+
+== Discussion ==
+ * While demonstration that the observed splitting probabilities correspond to those expected from diffusion along the extension coordinate is not conclusive evidence that other degrees of freedom are irrelevant, it can be used to quickly determine when additional degrees of freedom are obviously coupled to the slow motion.
+ * Demonstration that the extension coordinate was a good reaction coordinate for the systems considered here is not proof that this is true for all systems.
+
+ * This test assesses a necessary but not sufficient condition for the observable of interest to be a good reaction coordinate, but is probably relatively stringent.
+ 
+ * What if the test fails?  What can be done then?
+
+ * Extension to nonequilibrium pulling experiments.
+   * A good reaction coordinate under equilibrium conditions should also be a good reaction coordinate under nonequilibrium conditions, provided pulling rate isn't too fast.
+   * Is it possible to derive an equivalent test for nonequilibrium experiments?
+
+ * In simulations, where it is possible to prepare multiple copies of the system in exactly the same configuration and watch evolution under different noise histories, a similar technique has been used in the examination of '''committor distributions''' (see Peters, Roux, etc.).  We can't do that here in single-molecule experiments.
+
+== Extension as a reaction coordinate in the absence of force ==
+
+ * If the test succeeds for a single-molecule experiment in which fluctuations are observed at equilibrium in the absence of an external biasing force (e.g. for a single-molecule equilibrium FRET experiment), this immediately suggests that this coordinate provides a reasonable reaction coordinate.  But in pulling experiments under constant applied force, does demonstration that the splitting probabilities are well-described by Fokker-Planck for trajectories under applied force necessarily mean that this distance is a good reaction coordinate in the absence of biasing force?
+
+ * The Mori-Zwanzig projection operator formalism can provide some insight into how force applied along the observed extension coordinate can have an effect.
+
+== Supplementary Information ==
+ * Calculation of the potential of mean force and its uncertainty from the trajectory data
+ * Estimation of the splitting probabilities and their uncertainties from the trajectory data
+ * Estimation of the local diffusion constant and its uncertainty from the trajectory data
+
+= Additional Notes =
+== Effect of constant biasing force along observed distance in Mori-Zwanzig ==
+
+I thought about this on the walk home from the train today.  I think
+we both agree that a rapidly-varying external force can affect whether
+the pulling coordinate is a good reaction coordinate.  But what about
+a constant force (or even static arbitrary potential) applied along
+only along the observed extension coordinate?  Could a static force
+applied along a chosen coordinate, if large enough, affect whether the
+coordinate is a good reaction coordinate or not?
+
+I wonder if there is a way to demonstrate definitively yes or no.
+Turning to the Mori-Zwanzig projection operator formalism, suppose we
+have coordinates q and momenta p and wish to project onto some
+coordinate A(q).  MZ tells us we can write the correlation function
+along A as
+
+C(t) = - \int_0^t dt' M(t') C(t-t')
+
+where
+
+C(t) = (A(t), A*(0))  [correlation function]
+M(t) = (F(t), F*(0)) / (A,A)  [memory function]
+
+We know that the external force will probably affect the dynamics, and
+hence the correlation function C(t).  But can it really change an
+orders-of-magnitude separation between the decay time constant for the
+memory function M(t) and C(t)?
+
+Let P be the projection operator onto A, such that PB = (B,A)/(A,A) A;
+let Q = 1-P.
+
+The random force F(t) is defined as
+
+F(t) = exp[iQLA]
+
+where L is the Liouvillean for whatever model of dynamics is governing
+the microscopic process.
+
+If the process is governed by Hamiltonian dynamics, we can write
+
+L = - Dq H . Dp + Dp H . Dq
+
+where Dq is the gradient operator for q, and Dp the gradient for p.
+
+Adding a linear force in A(q), we have now
+
+H' = H + s A(q)
+
+such that
+
+L' = L - s Dq A . Dp
+
+Now, inserting this into our equation for the random force, we get the
+new random force
+
+F'(t) = exp[iQL'A] = exp[iQ(L - s Dq A . Dp)A] = exp[iQLA] = F(t)
+
+so the random force is unchanged.  This is what we would expect, since
+the force is applied only along the observed coordinate A(q).
+
+What *is* changed, however, is the averaging in computing the memory function:
+
+M(t) = (F(t),F(0)) / (A,A)
+
+Since the scalar product (A,B) denotes
+
+(A,B) = \int dq \int dp rho(q,p) A(q,p) B*(q,p)
+
+where rho(q,p) is the stationary distribution, we see that the
+*integrand* F(t) F*(0) of (F(t),F(0)) isn't changed, but the weighting
+measure rho(q,p) will be changed to reflect the shift in population
+due to the external biasing force.
+
+So, the big question remains unresolved.  We know that the integrand
+doesn't change, but it's possible that the force will shift the
+equilibrium such that a different set of "random force trajectories"
+are emphasized, causing a change in the apparent timescale of decay of
+M(t) relative to C(t).
+
+Anyway, I just thought the analysis was sort of interesting.  At
+first, I was excited that the force couldn't affect F(t), but then I
+realized that wasn't the whole story...
+

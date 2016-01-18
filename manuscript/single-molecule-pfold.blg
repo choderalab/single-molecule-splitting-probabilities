@@ -1,0 +1,83 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: single-molecule-pfold.aux
+The style file: apsrev4-1.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: single-molecule-pfoldNotes.bib
+Database file #2: single-molecule-pfold.bib
+Repeated entry---line 133 of file single-molecule-pfold.bib
+ : @article{lange-grubmuller:jcp:2006:estimating-memory-functions
+ :                                                               ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 273 of file single-molecule-pfold.bib
+ :  
+ :  Publisher = {Springer Lecture Notes in Physics},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 390 of file single-molecule-pfold.bib
+ : @article{woodside:science:2006:dna-hairpin-optical-trap
+ :                                                        ,
+I'm skipping whatever remains of this entry
+control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (-1) disabled
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+Warning--missing publisher in schuette-huisinga:2003:metastable-states
+Warning--empty year in schuette-huisinga:2003:metastable-states
+Warning--empty chapter and pages in schuette-huisinga:2003:metastable-states
+You've used 30 entries,
+            5847 wiz_defined-function locations,
+            1757 strings with 20131 characters,
+and the built_in function-call counts, 28920 in all, are:
+= -- 1815
+> -- 760
+< -- 217
++ -- 243
+- -- 195
+* -- 4427
+:= -- 2808
+add.period$ -- 29
+call.type$ -- 30
+change.case$ -- 115
+chr.to.int$ -- 44
+cite$ -- 33
+duplicate$ -- 2732
+empty$ -- 2126
+format.name$ -- 444
+if$ -- 5740
+int.to.chr$ -- 1
+int.to.str$ -- 37
+missing$ -- 367
+newline$ -- 136
+num.names$ -- 84
+pop$ -- 1189
+preamble$ -- 1
+purify$ -- 139
+quote$ -- 0
+skip$ -- 1052
+stack$ -- 0
+substring$ -- 743
+swap$ -- 2539
+text.length$ -- 88
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 406
+warning$ -- 4
+while$ -- 92
+width$ -- 0
+write$ -- 274
+(There were 3 error messages)

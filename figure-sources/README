@@ -1,0 +1,57 @@
+Matlab files to produce figures appearing in:
+
+Splitting probabilities as a test of reaction coordinate choice in single-molecule experiments 
+John D. Chodera and Vijay S. Pande. 
+Phys. Rev. Lett., 107:098102 (2011)
+
+Written by:
+
+John D. Chodera
+jchodera@berkeley.edu
+University of California, Berkeley
+
+See COPYRIGHT.txt for copyright notice applying to all software in this distribution.
+
+* Rhee-Pande model:
+
+generate_model_trajectory.m - generate trajectory for simple model
+generate_model_plots.m - generate plots for simple model
+
+
+* DNA hairpin from Block lab:
+
+generate_hairpin_plots.m - read DNA hairpin data and generate Best-Hummer plot
+analyze_hairpin_data.m - perform splitting analysis on hairpin data
+plot_hairpin_trajectory.m - plot splitting for DNA hairpin trajectory.
+
+-----
+
+* Support scripts and Java code used by the above driver scripts:
+
+simple_model.m - run this to regenerate all simple model system results
+plottmp.m - generate splitting probability comparison plots
+
+run_muller_brown.m - script to generate trajectory on Mueller-Brown potential
+
+integrate_bd.m - function to integrate Brownian dynamics trajectory 
+committor_analysis.m - function to compute empirical committor from observed trajectory x_t
+
+muller.m - Mueller 2D model potential
+muller_brown.m - Mueller-Brown 2D model potential
+rhee_pande.m - Rhee and Pande 2D model potential
+
+plot_committor_analysis.m - perform committor analysis and generate detailed plot, including histogram, PMF, and trajectory
+plot_committor_only.m - perform committor analysis and generate committor plot only
+
+best_hummer.m - perform Best-Hummer Bayesian analysis to compute PMF and diffusion constant, remapping observed coordinate to uniform diffusion constant
+rate_matrix_guess.m - guess initial rate matrix using optimization
+hummer_rate_matrix_update.m - perform Hummer Bayesian rate matrix sampling
+
+timeseries.java - Java support code for timeseries analysis
+bayesian.java - Java support code for Best-Hummer Bayesian analysis scheme
+
+* Redistributed for convenience (see license notice in those directories)
+
+exportfig/ - Matlab package to handle figure exports
+epsmerge/ - Matlab package to handle figure merging
+

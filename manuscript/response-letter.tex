@@ -1,0 +1,285 @@
+\documentclass[ucb,qb3,10pt,fullfrom]{ucletter}
+
+\usepackage{palatino}
+
+\name{John D. Chodera}
+\telephone{415.867.7384}
+\email{jchodera@berkeley.edu}
+%\department{Department of Chemistry}
+%\fromaddress{QB3 Institute}
+%260J Stanley Hall #3220\\
+%University of California\\
+%Berkeley, CA 94720-3220}
+%\mailcode{5447}
+\date{\today}
+
+%\documentclass[10pt]{letter}
+%\address{
+%John D. Chodera\\
+%QB3 Institute\\
+%260J Stanley Hall \#3220\\
+%University of California\\
+%Berkeley, CA 94720-3220, USA \\
+%phone: 415.867.7384\\
+%email: \href{mailto:jchodera@berkeley.edu}{jchodera@berkeley.edu}\\
+%\name{John D. Chodera}
+%}
+
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+
+\def\bs{$\backslash$}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\small\textsc{John D. Chodera - Cover Letter - \thepage}}
+
+\signature{\resizebox{1.5in}{!}{\includegraphics{JDC-signature}} \\
+John D.~Chodera, corresponding author
+} 
+
+\usepackage{times}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+
+% We will be using PDF figures and generating PDF output.
+\pdfoutput=1
+\pdfcompresslevel=9
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf}
+
+%        \addtolength{\oddsidemargin}{-.875in}
+%        \addtolength{\evensidemargin}{-.875in}
+%        \addtolength{\textwidth}{1.75in}
+%
+%        \addtolength{\topmargin}{-.875in}
+%        \addtolength{\textheight}{1.75in}
+%
+%\begin{document}
+%
+%\begin{letter}{To:\\MFPL Faculty Search Committee}
+%
+%\opening{Dear Search Committee,}
+
+
+\begin{document}
+\begin{letter}{Karsten Kruse, Associate Editor\\
+\emph{Physical Review Letters}}
+
+\small
+
+\opening{Dear Editor,}
+
+We are submitting a revised version of our manuscript:
+
+{\bf Splitting probabilities as a test of reaction coordinate choice in single-molecule experiments}\\
+by John D.~Chodera and Vijay S.~Pande.
+
+We thank the referees for their positive feedback and constructive suggestions.
+%During the review process, we also received additional feedback from colleagues, and have made a few additional edits to improve clarity and readability.
+We believe that the revised manuscript is now clearer and more easily understood by a broader audience as a result.
+To facilitate re-review, we have marked revised sections of the manuscript in red.
+Note that figures appearing in the manuscript no longer require color.
+
+Below, we respond point-by-point to the referee comments, clarifying how we have adapted the manuscript in response to their suggestions.
+Original comments from referees appear below in color, and our response in black.
+
+\color{blue}
+{\bf Referee A}
+
+This manuscript reports the development of a novel test for the
+evaluation of the choice of reaction coordinate to be used to describe
+the dynamics of the (single molecule) system in terms of Brownian
+dynamics between two (or more) metastable states.
+
+This test exploits the concept of splitting probabilities that are
+calculated theoretically using the Brownian dynamics equation with the
+potential of mean force (PMF) and independently estimated empirically
+from experimentally determined trajectories.If the two probabilities
+overlap well for a given range of the "reaction coordinate", the test
+suggests that the putative reaction coordinate is a good coordinate.
+
+The authors illustrate the application of this test to two systems.
+One is a model two dimensional potential surface with two wells and
+the other is a DNA hairpin jumping between two states (folded and
+unfolded) with the dynamics probed by optical tweezers.
+
+Interestingly, the authors using their test demonstrate that for the
+DNA hairpin the molecular extension along the pulling direction is not
+a good reaction coordinate for describing the hopping of the DNA
+hairpin between these two states. Instead, a good reaction coordinate
+was identified by assuming position-dependent diffusion (i.e.
+position-dependent diffusion constant). The authors propose that the
+presence of long DNA handles attached to the hairpin may be
+responsible for disqualification of simple extension as a good
+coordinate for this system.
+
+This is a very interesting manuscript that should be of interest to
+the single-molecule biophysics community.
+
+\color{black}
+We thank the referee for this enthusiasm and encouragement.
+
+\color{blue}
+I have just two minor points for the authors to consider.
+
+a) What are the ramifications of using molecular extension for the
+analysis of the dynamics of DNA hairpins, considering that extension
+is NOT the appropriate reaction coordinate?
+
+\color{black}
+This depends, of course, on what properties one wishes to obtain from the data under the assumption that the observed dynamics is along a good reaction coordinate.
+The consequences could be as simple as underestimating the rate constant for a two-state process or as subtle as inferring an erroneous mechanism for more complex processes.
+The most obvious consequence is mistaking the location of the transition state---the point where the splitting probability $p_A = 1/2$---to be displaced from where one would expect the free energy barrier to be from examination of the histogram or potential of mean force alone.
+For systems like DNA hairpins and proteins, this can have consequences for the interpretation of how ``brittle'' or ``compliant'' the folded and unfolded states are.
+We have added text in this revision to better communicate this.
+
+\color{blue}
+b) In their model the authors use the same letters to denote different
+variables (or constant). For example, $T$ is used for temperature but
+also for time (capital $T$).
+
+Also $\beta$ is used to denote $1/(k_B T)$ and for an auxiliary function in Eqs.~4 and 5.
+
+\color{black}
+We have made changes in this revision to avoid this collision of notation.
+
+\color{magenta}
+{\bf Referee B}
+The authors develop a framework for computing the splitting
+probability using experimental folding data from single molecule
+pulling experiments with a constant gentle force that allows the
+protein to unfold and refold many times. The authors parse a long
+experimental colloid-to-colloid distance trajectory in a manner
+reminiscent of the transition path theory by Vanden-Eijnden and
+coworkers. From the experimental trajectory, the authors directly
+estimate the coordinate dependent splitting probabilities. Then they
+project the trajectory onto the pulling coordinate to obtain a free
+energy landscape and a coordinate dependent diffusivity. They then
+flatten the diffusivity by adaptively stretching the original
+coordinate (and adjusting the free energy profile accordingly).
+Finally, they use the adjoint equation to compute the splitting
+probability that would result if the multidimensional dynamics were
+consistent with the chosen projection. By obtaining the splitting
+probability in these two ways, they test whether the pulling
+coordinate is a good reaction coordinate. Their analysis confirms what
+should be expected for some cases---that the pulling coordinate is not
+necessarily a good reaction coordinate. To my knowledge this is the
+first work to demonstrate this directly from the experimental data. 
+
+\color{black}
+We concur---to our knowledge, our manuscript is the first to demonstrate that the pulling coordinate is not necessarily a good reaction coordinate directly from experimental data.
+
+\color{magenta}
+In summary, the authors use cutting edge theoretical analysis to
+demonstrate a deep mechanistic question directly from experimental
+data. The work should be published after some minor corrections. 
+
+\color{black}
+We thank the referee for these words of encouragement.
+
+\color{magenta}
+My specific concerns are outlined below:
+
+0) Equation (8) clearly has a typo in the exponent on the left hand
+side. 
+
+\color{black}
+This equation has been removed while incorporating the referee's suggested changes below.
+
+\color{magenta}
+Also, I am not sure what the authors mean by necessary but not
+sufficient. You are working with trajectories from the equilibrium
+ensemble (on a the force-tilted landscape) and you are testing all
+values of $p_B$. Is that just meant to convey that a good coordinate on
+the force tilted landscape may not be a good coordinate on the native
+landscape? I would agree with that, but otherwise, I don't see what
+you mean. A test which sometimes accepts coordinates that are bad, but
+which never fails a good coordinate, would be ``necessary but not
+sufficient''. In your case---as outlined below in point (2)---I have
+concerns that this test may occasionally fail coordinates that are
+good. It may therefore be useful to describe these errors in the
+statistics lingo of type I and type II errors.
+
+\color{black}
+We mean ``necessary but not sufficient'' in the latter sense---that the test should not erroneously indicate a good reaction coordinate is poor, but may fail to identify a bad reaction coordinate in some pathological cases.
+This makes the test very useful, but it means that a failure of the test cannot rule out that the reaction coordinate may still be poor in some sense.
+We address the referee's additional concerns raised in point (2) below.
+
+\color{magenta}
+1) Coordinate dependent diffusion in Langevin equations and
+Smoluchowski equations date back many decades to shortly after the
+original works by Langevin and Smoluchowski. For example, they appear
+in very early theories of nucleation where the attachment frequency
+(diffusivity along nucleus size coordinate) is assumed to be
+proportional to nucleus area. The specific diffusion flattening and
+Jacobian free energy transformations in this work are useful, but it
+should be more clear from the references that refs 14 and 22 are
+primarily novel in the choice of how coordinates should be stretched.
+They are not new in showing what happens to the diffusivity and free
+energy upon a non-uniform stretching/compressing transformation. By
+the same token, equation (2) can be directly modified to accommodate a
+coordinate dependent diffusion. The coordinate dependent diffusivity
+would appear in the denominator of both integrands, as in the mean
+first passage time expression. For both of these reasons, it seems
+that the large emphasis on the diffusion flattening procedure is not
+warranted. The authors should shorten the discussion of coordinate
+dependent diffusion. That will provide more room to discuss the
+physical meaning of your findings. I expect that experimentalists will
+need some help interpreting the proposed test and deciding how it can
+be used to learn about the mechanism. For example, could they tether
+pulling handles to different locations on the protein in an effort to
+find a good coordinate?
+
+\color{black}
+We had initially thought that separating the computation of position-dependent diffusion provided a more interesting story, but on further reflection, we agree with the referee, and have restructured the manuscript appropriately and added more discussion as suggested.
+We agree that the result is much improved.
+
+\color{magenta}
+2) Reduction to a 1D Langevin model assumes that all degrees of
+freedom other than that corresponding to the splitting probability
+relax very quickly. For proteins of any significant complexity, this
+is likely to be violated. Consider for example A $\rightarrow$ B by two different
+"channels".
+\begin{itemize}
+\item A $\rightarrow$ ts1 $\rightarrow$ B.
+\item A $\rightarrow$ ts2 $\rightarrow$ B.
+\end{itemize}
+ts1 and ts2 could have the same splitting probability with no way to
+go between the two channels. Suppose the channels have the same free
+energy profile and that the pulling coordinate is a good coordinate
+for each of the two channels considered separately. Now suppose that
+the two channels have very different mobilities near the transition
+state along each channel. In this case, projection onto a 1D Langevin
+model will mix the two mobilities in a way that does not describe
+dynamics in either channel. Your test, I think, would indicate the
+pulling coordinate is not a good reaction coordinate even though it is
+good in the splitting probability sense. The authors should discuss
+such problematic cases.
+
+\color{black}
+The case described above is indeed pathological, in that time-correlation functions and empirical splitting probabilities would be well-described a single 1D Langevin model with an effective diffusion constant, but some other statistics of a single long trajectory would not necessarily be described correctly by this model.
+However, we would argue that the resolved coordinate is \emph{still} a good reaction coordinate in this situation, since it corresponds to \emph{the coordinate along which the rate-limiting diffusion process occurs between the two states}.
+The switching between channels, which may be slow, happens \emph{within} the stable states, so cannot affect the behavior after the system leaves one stable state for the other.
+We do agree that this is a difficult case, either operationally or conceptually, and have added some clarification of this issue to the \emph{Discussion}.
+
+When we claim our test is ``necessary but not sufficient'', we are particularly concerned about situations where the \emph{average} splitting probability at a given value of the resolved coordinate matches the PMF-derived model, but the splitting probability \emph{distribution} is not well-peaked about the average.  
+In such cases, the reaction coordinate would be poor (because the splitting probability distribution is not always tightly grouped), but the test would fail to identify the reaction coordinate as poor.
+We have amended the \emph{Discussion} to clarify this point.
+
+\color{magenta}
+3) You should mention works by Peters, Beckham, and Trout, J. Chem.
+Phys. 2007 and also Lechner, Bolhuis, and Ensing, J. Chem. Phys. 2010.
+Both of these works compare directly projected splitting probabilities
+to the predicted splitting probabilities from a 1D model. Their models
+of the splitting probability are from likelihood maximization on
+simulation data and their trajectories are not from the equilibrium
+ensemble, but the nature of their test is similar to that in your
+figures 2 and 4.
+
+\color{black}
+We agree with the referee that this work is highly relevant, and have added appropriate citations.
+
+\closing{Kind regards,}
+\end{letter}
+\end{document}

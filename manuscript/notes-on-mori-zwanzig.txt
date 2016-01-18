@@ -1,0 +1,80 @@
+I thought about this on the walk home from the train today.  I think
+we both agree that a rapidly-varying external force can affect whether
+the pulling coordinate is a good reaction coordinate.  But what about
+a constant force (or even static arbitrary potential) applied along
+only along the observed extension coordinate?  Could a static force
+applied along a chosen coordinate, if large enough, affect whether the
+coordinate is a good reaction coordinate or not?
+
+I wonder if there is a way to demonstrate definitively yes or no.
+Turning to the Mori-Zwanzig projection operator formalism, suppose we
+have coordinates q and momenta p and wish to project onto some
+coordinate A(q).  MZ tells us we can write the correlation function
+along A as
+
+C(t) = - \int_0^t dt' M(t') C(t-t')
+
+where
+
+C(t) = (A(t), A*(0))  [correlation function]
+M(t) = (F(t), F*(0)) / (A,A)  [memory function]
+
+We know that the external force will probably affect the dynamics, and
+hence the correlation function C(t).  But can it really change an
+orders-of-magnitude separation between the decay time constant for the
+memory function M(t) and C(t)?
+
+Let P be the projection operator onto A, such that PB = (B,A)/(A,A) A;
+let Q = 1-P.
+
+The random force F(t) is defined as
+
+F(t) = exp[iQLA]
+
+where L is the Liouvillean for whatever model of dynamics is governing
+the microscopic process.
+
+If the process is governed by Hamiltonian dynamics, we can write
+
+L = - Dq H . Dp + Dp H . Dq
+
+where Dq is the gradient operator for q, and Dp the gradient for p.
+
+Adding a linear force in A(q), we have now
+
+H' = H + s A(q)
+
+such that
+
+L' = L - s Dq A . Dp
+
+Now, inserting this into our equation for the random force, we get the
+new random force
+
+F'(t) = exp[iQL'A] = exp[iQ(L - s Dq A . Dp)A] = exp[iQLA] = F(t)
+
+so the random force is unchanged.  This is what we would expect, since
+the force is applied only along the observed coordinate A(q).
+
+What *is* changed, however, is the averaging in computing the memory function:
+
+M(t) = (F(t),F(0)) / (A,A)
+
+Since the scalar product (A,B) denotes
+
+(A,B) = \int dq \int dp rho(q,p) A(q,p) B*(q,p)
+
+where rho(q,p) is the stationary distribution, we see that the
+*integrand* F(t) F*(0) of (F(t),F(0)) isn't changed, but the weighting
+measure rho(q,p) will be changed to reflect the shift in population
+due to the external biasing force.
+
+So, the big question remains unresolved.  We know that the integrand
+doesn't change, but it's possible that the force will shift the
+equilibrium such that a different set of "random force trajectories"
+are emphasized, causing a change in the apparent timescale of decay of
+M(t) relative to C(t).
+
+Anyway, I just thought the analysis was sort of interesting.  At
+first, I was excited that the force couldn't affect F(t), but then I
+realized that wasn't the whole story...

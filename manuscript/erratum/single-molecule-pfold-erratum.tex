@@ -1,0 +1,98 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT CLASS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Single-spaced, two-column with PRL look and style (easy on the eyes)
+\documentclass[aps,prl,twocolumn,superscriptaddress,floatfix]{revtex4-1}
+
+% Double-spaced, one-column style (for submission/review/editing)
+%\documentclass[aps,preprint,prl,superscriptaddress,showpacs]{revtex4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{palatino}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{boxedminipage}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+
+% The figures are in a figures/ subdirectory.
+\graphicspath{{../figures/}}
+
+% italicized boldface for math (e.g. vectors)
+\newcommand{\bfv}[1]{{\mbox{\boldmath{$#1$}}}}
+% non-italicized boldface for math (e.g. matrices)
+\newcommand{\bfm}[1]{{\bf #1}}          
+
+%\newcommand{\bfm}[1]{{\mbox{\boldmath{$#1$}}}}
+%\newcommand{\bfm}[1]{{\bf #1}}
+\newcommand{\expect}[1]{\left \langle #1 \right \rangle}                % <.> for denoting expectations over realizations of an experiment or thermal averages
+
+% vectors
+\newcommand{\x}{\bfv{x}}
+\newcommand{\y}{\bfv{y}}
+\newcommand{\f}{\bfv{f}}
+
+\newcommand{\bfc}{\bfm{c}}
+\newcommand{\hatf}{\hat{f}}
+
+\newcommand{\bTheta}{\bfm{\Theta}}
+\newcommand{\btheta}{\bfm{\theta}}
+\newcommand{\bhatf}{\bfm{\hat{f}}}
+\newcommand{\Cov}[1] {\mathrm{cov}\left( #1 \right)}
+\newcommand{\Ept}[1] {{\mathrm E}\left[ #1 \right]}
+\newcommand{\Eptk}[2] {{\mathrm E}_{#1}\left[ #2\right]}
+\newcommand{\T}{\mathrm{T}}                                % T used in matrix transpose
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE AND AUTHORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\title{When is extension a good reaction coordinate in single-molecule pulling experiments?}
+\title{Erratum for ``Splitting probabilities as a test of reaction coordinate choice in single-molecule experiments''}
+
+ \author{John D. Chodera}
+ \email{jchodera@berkeley.edu}
+ \affiliation{California Institute of Quantitative Biosciences (QB3), University of California, Berkeley, CA 94720}
+ 
+\author{Vijay S. Pande}
+ \thanks{Corresponding author}
+  \email{pande@stanford.edu}
+ \affiliation{Department of Chemistry, Stanford University, Stanford, CA 94305}
+
+\date{\today}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ERRATUM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Our recent paper on a reaction coordinate test for single-molecule experiments based on computation of the splitting probability~\cite{chodera-pande:prl:2011:splitting} contained two typographical errors.
+Eq.~1 (describing overdamped Langevin dynamics) contained a significant typographical error in the first term of the right-hand side, and should have read
+\begin{eqnarray}
+\dot{x}(t) &=& - \frac{1}{\gamma(x)} \frac{\partial}{\partial x}F(x) + \sqrt{2 D(x)} R(t) \nonumber,
+\end{eqnarray}
+where the function $\gamma(x)$ is related to $D(x)$ through the fluctuation-dissipation relation.
+Eq.~5 (describing auxiliary functions used in computing the hitting function) omitted primes in $x(t)$, and should have read
+\begin{eqnarray}
+\tau_A(t) &=& \inf \{ t' > t : x(t') < a \} \nonumber \\
+\tau_B(t) &=& \inf \{ t' > t : x(t') > b \} \nonumber .
+\end{eqnarray}
+Neither typographical error affects the remaining equations or results in the paper, and the correct forms of these equations were used in the computations performed therein.
+
+We thank Alexander Grosberg (NYU) for pointing out the first error.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{single-molecule-pfold}
+
+\end{document}

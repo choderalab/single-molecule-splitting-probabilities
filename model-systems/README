@@ -1,0 +1,21 @@
+MANIFEST
+
+simple_model.m - run this to regenerate all simple model system results
+plottmp.m - generate splitting probability comparison plots
+
+run_muller_brown.m - script to generate trajectory on Mueller-Brown potential
+
+integrate_bd.m - function to integrate Brownian dynamics trajectory 
+committor_analysis.m - function to compute empirical committor from observed trajectory x_t
+
+muller.m - Mueller 2D model potential
+muller_brown.m - Mueller-Brown 2D model potential
+rhee_pande.m - Rhee and Pande 2D model potential
+
+plot_committor_analysis.m - function to plot committor analysis
+
+best_hummer.m - perform Best-Hummer Bayesian analysis to compute PMF and diffusion constant, remapping observed coordinate to uniform diffusion constant
+
+exportfig.m - utility for generating publication-quality figures
+
+timeseries.java - Java support code for timeseries analysis
